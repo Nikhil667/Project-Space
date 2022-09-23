@@ -1,13 +1,16 @@
-let planeImg = document.getElementById("planeImg")
-let planeImgSecond = document.getElementById("planeImgSecond")
+let planeImg = document.getElementById("planeImg");
+let planeImgSecond = document.getElementById("planeImgSecond");
 
 
 window.addEventListener('scroll', function(){
+    
     let value = this.window.scrollY;
     planeImg.style.marginLeft = value * 2 + 'px';
-    planeImgSecond.style.marginRight = value * 0.5 + 'px';
+    //planeImgSecond.style.marginRight = value * 1 + 'px';
     
 })
+
+
 
 // let planetNames = document.getElementById("planetName");
 // // let moon = document.getElementById("moon");
@@ -43,6 +46,8 @@ window.addEventListener('scroll', function(){
 //             }
 //         });
 //         console.table(planetData);
+
+//         console.log(JSON.stringify(planetData));
         
         
 
@@ -142,9 +147,9 @@ window.addEventListener('scroll', function(){
 //         //     }
 //         //     planetName.innerText = `${name}`;
 //         // })
-//     }
+ //   }
 
-//     fetchData();
+ //   fetchData();
     
 //     // fetch("https://api.le-systeme-solaire.net/rest/bodies")
 //     //     .then(res => res.json())
@@ -195,7 +200,5 @@ window.addEventListener('scroll', function(){
 
 //     oneDayInHours[count5++] = parseFloat(Math.abs(data.bodies[i].sideralRotation)).toFixed(2);
 
-//     temperatureInCelcius[count3++] = parseFloat(data.bodies[i].avgTemp-273.15).toFixed(2);
-//             }
-
-// */
+//     temperatureInCelcius[count3++] = parseFloat(data.bodies[i].avgTemp-273.15).toFixed(2);*/
+             //})

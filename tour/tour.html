@@ -13,7 +13,7 @@
     <header>
         <nav class="nav">
             <div class="nav--logo">
-                <img class="nav--img" src="images/astronaut-svg.svg" alt="logo">
+                <img class="nav--img" src="../images/astronaut-svg.svg" alt="logo">
                 <h2 class="nav--text">COSMOS</h2>
             </div>
             <ul class="nav--links">
@@ -23,6 +23,62 @@
             </ul>
         </nav>
     </header>
+
+    <section class="hero--section">
+        <div class="hero--container">
+            <aside class="hero--side">
+                <ul class="hero--links">
+                    <li class="bold">Terrestrial Planets</li>
+                    <button value="4">Mercury</button>
+                    <button value="7">Venus</button>
+                    <button value="6">Earth</button>
+                    <button value="3">Mars</button>
+                </ul>
+                <ul class="hero--links">
+                    <li class="bold">Gas Planets</li>
+                    <button value="2">Jupiter</button>
+                    <button value="5">Saturn</button>
+                    <button value="0">Uranus</button>
+                    <button value="1">Neptune</button>
+                </ul>
+                <ul class="hero--links">
+                    <li class="bold">Dwarf Planets</li>
+                    <button>Pluto</button>
+                    <button>Ceres</button>
+                    <button>Haumea</button>
+                    <button>Makemake</button>
+                    <button>Iris</button>
+                </ul>
+            </aside>
+
+            <div class="hero--content">
+                
+                <div class="hero--img" ><img id="hero--planetImg" src="" alt="earth"></div>
+
+                <div class="hero--info">
+                    <article class="hero--card">
+                        <h2 class="hero--heading" id="hero--name">EARTH</h2>
+                        <p id="hero--des">Our home planet Earth is a rocky, terrestrial planet. It has a solid and active surface with mountains, valleys, canyons, plains and so much more. Earth is special because it is an ocean planet. Water covers 70% of Earth's surface.</p>
+                        <p >Position ( In Solar System ) : <span class="hero--position"></span></p>
+
+                        <p >Number of Moon : <span class="hero--moon"></span></p>
+
+                        <p >Number of hours in a day : <span class="hero--hours"></span> hours</p>
+
+                        <p >Number of days in a year : <span class="hero--days"></span> days</p>
+
+                        <p >Average Temperature : <span class="hero--temp"></span>  &#8451</p>
+
+                        <p >Surface Gravity : <span class="hero--gravity"></span> m/s<sup>2</sup> </p>
+
+                    </article>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+    <script src="./tour-script.js"></script>
     
 </body>
 </html>
+
