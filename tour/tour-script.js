@@ -1,4 +1,25 @@
+const loader = document.querySelector('.preloader');
+const emoji = loader.querySelector('.emoji');
+
+const emojis = ["🕐", "🕜", "🕑","🕝", "🕒", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕖", "🕢",  "🕗", "🕣", "🕘", "🕤", "🕙",  "🕥", "🕚", "🕦",  "🕛", "🕧"];
+
+const interval = 125;
+
 window.addEventListener('load', () => {
+
+const loadEmojis = (arr) => {
+    setInterval(() => {
+      emoji.innerText = arr[Math.floor(Math.random() * arr.length)];
+      //console.log(Math.floor(Math.random() * arr.length))
+    }, interval);
+}
+
+const init = () => {
+  loadEmojis(emojis);
+}
+init();
+
+//window.addEventListener('load', () => {
     async function fetchData(){
 
         const res = await fetch("https://api.le-systeme-solaire.net/rest/bodies")
@@ -12,13 +33,14 @@ window.addEventListener('load', () => {
         
     }
     fetchData();
+    document.querySelector(".preloader").style.display = "none";
 });
 
 
 function getData(data){
 
     let planetData = data.bodies.filter(ele => (ele.bodyType === 'Planet')).map((ele) =>{
-        {
+        
         return {
             planetName : ele.englishName,
             numberOfMoons : ele.moons,
@@ -28,17 +50,17 @@ function getData(data){
             gravity : ele.gravity,
             position : ["7","8","5","4","1","6","3","2"],
             imgUrl : [
+                "../images/tour/planet/uranus.svg",
+                "../images/tour/planet/neptune.svg",
+                "../images/tour/planet/jupiter.svg",
                 "../images/tour/planet/mars.svg",
-                "../images/tour/planet/mars.svg",
-                "../images/tour/planet/mars.svg",
-                "../images/tour/planet/mars.svg",
-                "../images/tour/planet/mars.svg",
-                "../images/tour/planet/mars.svg",
+                "../images/tour/planet/mercury.svg",
+                "../images/tour/planet/saturn.svg",
                 "../images/tour/planet/earth.svg",    
-                "../images/tour/planet/mars.svg",
+                "../images/tour/planet/venus.svg",
             ]
         }    
-        }
+        
     });
 
     console.log(planetData);
